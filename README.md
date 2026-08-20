@@ -75,7 +75,7 @@ Receber uma palavra (`string`) e retornar essa palavra na ordem inversa.
 ### Minhas decisões
 
 - Converti a string em um slice `rune` (`int32`) para rodar o algoritmo de reversão. Essa conversão é extremamente rápida nesse cenário e quis testar com caracteres especiais.
-- Poderia quebrar a string em uma slice de substrings (uma por caractere) com `strings.Split(word, "")`, em vez de converter para `[]byte` ou `[]rune` manualmente. No entanto, eu criaria um overhead gerando múltiplas alocações em memória dependendo do tamanho da memória. O rune apenas decodifica para Code points os bytes da string, gerando uma única alocação em memória.
+- Poderia quebrar a string em uma slice de substrings (uma por caractere) com `strings.Split(word, "")`, em vez de converter para `[]byte` ou `[]rune` manualmente. No entanto, eu criaria um overhead gerando múltiplas alocações em memória dependendo do tamanho da string (ex: um texto grande). O rune apenas decodifica para Code points os bytes da string, gerando uma única alocação em memória.
 - Poderia também utilizar a conversão para `byte`, no entanto gerará um problema quando houver caracteres especiais - Unicode - onde são usado 2 bytes para representar esse caracter, ao inverter causaria a quebra dele.
 Quis testar esse cenário de caracter especial, por isso inseri um teste com a palavra Goiás - onde `á` é armazenada com 2 bytes.
 - Usei `slices.Reverse` para inverter a slice resultante no lugar, aproveitando a função pronta do pacote `slices` em vez de escrever um loop de troca de índices.
