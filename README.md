@@ -14,6 +14,7 @@ Repositório de estudos para praticar sintaxe e conceitos da linguagem Go. Cada 
 - [Sum](#sum)
 - [Reverse](#reverse)
 - [NumInList](#numinlist)
+- [GCD/MDC](#gcd)
 
 ---
 
@@ -168,6 +169,62 @@ func main(){
 	fmt.Println("Vazia Teste: ", NumInList([]int{}, 5))
 }
 ```
+
+## Máximo Divisor Comum
+
+**Pasta:** [gcd/gcd.go](gcd/gcd.go)
+
+### Proposta
+
+MDC/GCD significa máximo divisor comum.
+Dados dois números, o MDC calcula o maior divisor pelo qual ambos os números podem ser divididos sem deixar resto.
+
+### Minhas decisões
+
+- Escolhi o Algoritmo de Euclides (Algoritmo Euclidiano) por ser a implementação mais simples do cálculo de MDC e mais perfomática. Ele reduz o problema maior a um menor e mais fácil de resolver.
+- Existe também o método de Fatoração para encontrar o MDC de dois números. No entanto, este é mais complexo de implementar e menos perfomático. A complexidade de tempo do Algoritmo Euclidiano é O(Log n), enquanto a Fatoração é de O(Raiz quadrada de N). Portanto, a escolha pelo Algoritmo Euclidiano é assegurada por esses fatores.
+- Utilizei apenas fmt como stdlib para printar no console o MDC.
+- O principal trade-off é a implementação do algoritmo, que pode se dá por meio da Recursão ou Loop For. Optei pela recursão por ser mais prático de implementar. 
+
+
+### Código
+``` go
+package main
+
+import "fmt"
+
+// MDC/GCD significa máximo divisor comum.
+// Dados dois números, o MDC calcula o maior número pelo qual ambos os números podem ser divididos sem deixar resto.
+func GCD(a, b int) int {
+	// Usarei o algoritmo Euclidiano para solucionar esse problema, reduzindo-o a um problema menor.
+	// Usarei também a função recursiva para a solução.
+	// O algoritmo Euclidiano fala em: Dado um MDC(A,B), onde A != 0 e B != 0 => dividi-se A/B, resultando em um novo MDC(B,R), onde R = resto da divisão anterior,
+	// reduzindo o MDC até que um dos inteiros seja 0.
+	// As 3 Propriedades do Algoritmo são:
+		// - MDC(A,0) = A
+		// - MDC(0,B) = B
+		// - Se A = B⋅Q + R e B≠0, então MDC(A,B) = MDC(B,R) sendo Q um inteiro, e R um inteiro entre 0 e B-1 
+	fmt.Printf("MDC(%v, %v)\n", a, b)
+
+	if a == 0 && b != 0{return b}
+	if b == 0 && a != 0{return a}
+
+	r := a % b
+
+	if r == 0 {return b} else {
+		return GCD(b,r)
+	}
+
+
+}
+
+
+func main(){
+	a, b := 270,192
+	fmt.Printf("O máximo divisor comum de %v e %v é %v\n",a , b, GCD(a, b))
+}
+```
+
 ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 ![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)
 
