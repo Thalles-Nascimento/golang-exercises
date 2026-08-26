@@ -15,13 +15,8 @@ func GCD(a, b int) int {
 		// - Se A = B⋅Q + R e B≠0, então MDC(A,B) = MDC(B,R) sendo Q um inteiro, e R um inteiro entre 0 e B-1 
 	fmt.Printf("MDC(%v, %v)\n", a, b)
 
-	if a == 0 && b != 0{return b}
-	if b == 0 && a != 0{return a}
-
-	r := a % b
-
-	if r == 0 {return b} else {
-		return GCD(b,r)
+	if b == 0 {return a} else {
+		return GCD(b,a%b)
 	}
 
 
