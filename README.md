@@ -14,7 +14,7 @@ Repositório de estudos para praticar sintaxe e conceitos da linguagem Go. Cada 
 - [Sum](#sum)
 - [Reverse](#reverse)
 - [NumInList](#numinlist)
-- [GCD/MDC](#gcd)
+- [MDC](#mdc)
 
 ---
 
@@ -170,7 +170,7 @@ func main(){
 }
 ```
 
-## Máximo Divisor Comum
+## MDC
 
 **Pasta:** [gcd/gcd.go](gcd/gcd.go)
 
