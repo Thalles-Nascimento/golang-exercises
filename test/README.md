@@ -1,6 +1,6 @@
-# Testes em Go
+# Testes de Benchmark
 
-Esta pasta é utilizada para realizar os testes de execução dos scripts desenvolvidos nesse repositório.
+Esta pasta é utilizada para realizar os testes de benchmark dos scripts desenvolvidos nesse repositório.
 
 ## Sobre os testes
 - Cada teste será realizado com duas abordagens: 1º Considerada a melhor para aquele cenário; 2º A pior para aquele cenário
@@ -18,7 +18,7 @@ Esta pasta é utilizada para realizar os testes de execução dos scripts desenv
 
 ## MDC_test
 
-**Pasta:** [test/gcd/gcd_test.go](test/gcd/gcd_test.go)
+**Pasta:** [test/gcd/gcd_test.go](/test/gcd/gcd_test.go)
 
 ### Proposta
 

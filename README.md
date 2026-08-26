@@ -8,6 +8,7 @@ Repositório de estudos para praticar sintaxe e conceitos da linguagem Go. Cada 
 - Para rodar, basta ter o Golang instalado na máquina e roda o comando `go run exercises/<nome>/<nome>.go` => Exemplo: `go run reverse/reverse.go`
 - Exercícios **ainda não resolvidos** ficam como o stub original do curso: `package module01` com a função declarada mas com corpo vazio (ex: `fizz_buzz/fizz_buzz.go`).
 - Exercícios **já resolvidos** viram `package main`, com a lógica implementada e uma função `main()` demonstrando chamadas de teste via `fmt.Println`.
+- Testes de Benchmark sendo realizados em [Testes](/test/).
 
 ## Índice de exercícios resolvidos
 
