@@ -1,0 +1,25 @@
+goos: linux
+goarch: amd64
+cpu: AMD Athlon(tm) 5150 APU with Radeon(tm) R3     
+BenchmarkGCD/impl=euclides-4         	143150198	         7.779 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=euclides-4         	153676141	         8.003 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=euclides-4         	149667937	         7.925 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=euclides-4         	144178099	         8.792 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=euclides-4         	153257985	         7.941 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=euclides-4         	152452230	         7.949 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=euclides-4         	151223755	         7.777 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=euclides-4         	153545863	         7.890 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=euclides-4         	153141804	         7.861 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=euclides-4         	150398152	         8.114 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=fatoracao-4        	 2072995	       572.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=fatoracao-4        	 2018956	       572.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=fatoracao-4        	 2030404	       569.8 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=fatoracao-4        	 2013178	       570.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=fatoracao-4        	 2044306	       570.6 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=fatoracao-4        	 1857270	       588.6 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=fatoracao-4        	 2003683	       570.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=fatoracao-4        	 2064066	       571.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=fatoracao-4        	 2023126	       574.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkGCD/impl=fatoracao-4        	 1998865	       567.8 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	command-line-arguments	37.843s
